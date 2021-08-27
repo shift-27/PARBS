@@ -1,51 +1,49 @@
 #TAG,NAME IN REPO (or git url),PURPOSE (should be a verb phrase to sound right while installing)
 ,xorg-server,"is the graphical server."
-,xf86-video-intel,"Very important intel drivers"
-,xf86-input-libinput,"you want to use your pc right?"
+,xf86-video-intel,"are Very important intel drivers"
+,xf86-input-libinput,"will make your pc not useleses"
 ,xorg-xwininfo,"allows querying information about windows."
-,xorg-xrdb,
-,xfconf,
-,xf86-input-wacom,
-,x11vnc,
-,xkeyboard-config,
-,xorg-font-util,
-,xorg-fonts-encodings,
-,xorg-fonts-misc,
-,xorg-xinit,
-,xorg-xinput,
-,xorg-xrandr,
-,intel-compute-runtime,"wintel"
-,intel-gpu-tools,"yes"
-,intel-media-driver,"driver go brrr"
-,intel-graphics-compiler,"compile gpu?"
-,intel-media-sdk,"idk lel"
-,ttf-linux-libertine,"provides the sans and serif fonts for PARBS."
-,adobe-source-han-sans-jp-fonts,"japan sans"
-,adobe-source-han-serif-jp-fonts,"japan serif"
+,xfconf,"is used to configure x applications"
+,xf86-input-wacom,"is the drivers for drawing tablets"
+,xkeyboard-config,"is keyboard configuration"
+,xorg-font-util,"is utilities for font"
+,xorg-fonts-encodings,"are font encodings"
+,xorg-fonts-misc,"are miscellanious fonts"
 ,xcompmgr,"is for transparency and removing screen-tearing."
 ,xorg-xprop,"is a tool for detecting window properties."
+,xorg-xinit,"lets you start gui from your tty"
+,xorg-xinput,"lets you manage your input devices"
+,xorg-xrandr,"lets you manage your monitor and display"
+,xwallpaper,"sets the wallpaper."
+,libxinerama,"is a library required for dwm, your gui"
+,libxft,"is a library required for dwm, your gui"
+,libxrandr,"is a library required for dwm, your gui"
+,libxrender,"is a library required for dwm, your gui"
+,intel-compute-runtime,"optimizes your pc for interl-cpus"
+,intel-gpu-tools,"optimizes your intel gpu"
+,intel-media-driver,"contains the graphical drivers"
+,intel-graphics-compiler,"is used for rendering graphics, i think"
+,intel-media-sdk,"idk lel"
+,ttf-linux-libertine,"provides the sans and serif fonts."
+,adobe-source-han-sans-jp-fonts,"is japanese sans fonts"
+,adobe-source-han-serif-jp-fonts,"is japanese serif fonts"
 ,dosfstools,"allows your computer to access dos-like filesystems."
 ,libnotify,"allows desktop notifications."
 ,dunst,"is a suckless notification system."
 ,exfat-utils,"allows management of FAT drives."
 ,sxiv,"is a minimalist image viewer."
-,net-tools,
-,virtualbox,
-,virtualbox-host-dkms,
-,virtualbox-guest-iso,
-,dhclient,
-,elogind,
-,xwallpaper,"sets the wallpaper."
+,net-tools,"connects you to your network"
+,dhclient,"gets ip adress from router for internet"
 ,ffmpeg,"can record and splice video and audio on the command line."
 ,gnome-keyring,"serves as the system keyring."
-,vim,"edit text"
-,mpv,"is the patrician's choice video player."
-,man-db,"lets you read man pages of programs."
+,vim,"is the best text editor"
+,mpv,"is the video player."
+,man-db,"lets you read manuals of programs."
 ,newsboat,"is a terminal RSS client."
-,firefox,"is fox"
-,dmenu,"app launcher yes"
+,firefox,"is the browser"
+,dmenu,"launces your apps"
 ,noto-fonts-emoji,"is an emoji font."
-,ntfs-3g,"allows accessing NTFS partitions."
+,ntfs-3g,"allows accessing NTFS partitions for windows drives"
 ,pulseaudio-alsa,"is the audio system."
 ,pulsemixer,"is an audio controller."
 ,pamixer,"is a command-line audio interface."
@@ -59,52 +57,41 @@
 ,xorg-xdpyinfo,"aids with resolution determination and screen recording."
 ,youtube-dl,"can download any YouTube video (or playlist or channel) when given the link."
 ,zathura,"is a pdf viewer with vim-like bindings."
-,zathura-pdf-mupdf,"allows mupdf pdf compatibility in zathura."
-,zathura-cb,"comik books support!!"
-,zathura-djvu,"some kind of deja-vu file support"
+,zathura-pdf-mupdf,"allows pdf compatibility in zathura."
+,zathura-cb,"is comic books support!!"
+,zathura-djvu,"is some kind of deja-vu file support"
 ,poppler,"manipulates .pdfs and gives .pdf previews and other .pdf functions."
 ,mediainfo,"shows audio and video information."
 ,atool,"manages and gives information about archives."
 ,highlight,"can highlight code output."
 ,xorg-xbacklight,"enables changing screen brightness levels."
-,bluez,"Blutooth support"
-,bluez-libs,""
-,bluez-tools,""
-,bluez-utils,""
-,calibre,"Your digital e-book library"
-,curl,"download things"
-,keepassxc,"passwd manager"
-,net-tools,"net-tools yes"
-,diffutils,"patchem"
-,fontconfig,"font"
-,glibc,"gnu bloated library"
+,bluez-libs,"is a bluetooth support library"
+,bluez,"is the Blutooth backend"
+,bluez-tools,"are some tools to manage bluetooth"
+,bluez-utils,"are the tools to configure bluetooth"
+,diffutils,"is used to patch applications"
+,fontconfig,"is fontconfig"
+,glibc,"is a gnu bloated library"
 ,handbrake,"video manipulator magic"
-,harfbuzz,"dwm dependency"
-,imagemagick,"image magic"
-,linux-headers,"compile kernel modules and your own drivers"
-,libxinerama,
-,libxft,
-,libxrandr,
-,libxrender,
-,youtube-dl,
-,pciutils,"lspci"
-,zsh,"zoomer shell"
-,zsh-syntax-highlighting,
-,htop,
-,python-pip,
-,nginx,
-,gparted,
-,gnupg,
-,cheese,
-,qbittorrent,
-,torbrowser-launcher,
-,certbot,
-,certbot-nginx,
-,python-pywal,
-A,zoom,
-A,gtk-theme-arc-gruvbox-git,
-A,skypeforlinux-stable-bin,
-A,input-veikk-dkms,
+,harfbuzz,"is another dwm dependency"
+,imagemagick,"does image magic"
+,x11vnc,"lets you connect to your pc from a vnc client"
+,pciutils,"lets you manage your hardware"
+,zsh-syntax-highlighting,"is the syntax highlighting for your shell"
+,htop,"is a great task manager"
+,python-pip,"is a python module manager"
+,gnupg,"lets you encrypt and decrypt emails and other data"
+,cheese,"is a webcam client"
+,qbittorrent,"is your torrent client to download totally legal files"
+,torbrowser-launcher,"lets you launch an super duper anonymous browser"
+,python-pywal,"it generates color schemes based on your wallpaper"
+,keepassxc,"is a passwd manager"
+,youtube-dl,"helps your download and manage youtube videos"
+,calibre,"is Your digital e-book library"
+A,zoom,"is the infamous online confrence software"
+A,gtk-theme-arc-gruvbox-git,"is a theme for the system"
+A,skypeforlinux-stable-bin,"is a skype client that barely works"
+A,input-veikk-dkms,"is the drivers for MY drawing tablet"
 G,https://github.com/shift-27/slstatus.git,"status bar moment"
 G,https://github.com/lukesmithxyz/st.git,"custom build of suckless's terminal emulator."
 G,https://github.com/shift-27/dwm.git,"is the window manager."
