@@ -14,7 +14,7 @@ while getopts ":a:r:b:p:h" o; do case "${o}" in
 	*) printf "Invalid option: -%s\\n" "$OPTARG" && exit 1 ;;
 esac done
 
-#[ -z "$dotfilesrepo"  ] && dotfilesrepo="https://github.com/shift-27/dotfiles.git"
+[ -z "$dotfilesrepo"  ] && dotfilesrepo="https://github.com/shift-27/dotfiles.git"
 [ -z "$progsfile" ] && progsfile="https://raw.githubusercontent.com/shift-27/PARBS/main/progs.csv"
 [ -z "$aurhelper" ] && aurhelper="paru"
 [ -z "$repobranch" ] && repobranch="master"
@@ -74,13 +74,13 @@ newperms() { # Set special sudoers settings for install (or after).
 	echo "$* #PARBS" >> /etc/sudoers ;}
 
 manualinstall() { # Installs $1 manually if not installed. Used only for AUR helper here.
-	[ -f "/usr/bin/$1" ] || (
-	dialog --infobox "Installing \"$1\", Paru..." 4 50
+	[ -f "/usr/bin/paru" ] || (
+	dialog --infobox "Installing Paru..." 4 50
 	cd /tmp || exit 1
-	rm -rf /tmp/"$1"*
-	curl -sO https://aur.archlinux.org/cgit/aur.git/snapshot/"$1".tar.gz &&
-	sudo -u "$name" tar -xvf "$1".tar.gz >/dev/null 2>&1 &&
-	cd "$1" &&
+	rm -rf /tmp/paru*
+	curl -sO https://aur.archlinux.org/cgit/aur.git/snapshot/paru.tar.gz &&
+	sudo -u "$name" tar -xvf paru.tar.gz >/dev/null 2>&1 &&
+	cd paru &&
 	sudo -u "$name" makepkg --noconfirm -si >/dev/null 2>&1 || return 1
 	cd /tmp || return 1) ;}
 
@@ -102,7 +102,7 @@ gitmakeinstall() {
 aurinstall() { \
 	dialog --title "PARBS Installation" --infobox "Installing \`$1\` ($n of $total) from the AUR. $1 $2" 5 70
 	echo "$aurinstalled" | grep -q "^$1$" && return 1
-	sudo -u "$name" $aurhelper -S --noconfirm "$1" >/dev/null 2>&1
+	sudo -u "$name" paru -S --noconfirm "$1" >/dev/null 2>&1
 	}
 
 pipinstall() { \
@@ -192,7 +192,7 @@ grep -q "ILoveCandy" /etc/pacman.conf || sed -i "/#VerbosePkgLists/a ILoveCandy"
 # Use all cores for compilation.
 sed -i "s/-j4/-j$(nproc)/;s/^#MAKEFLAGS/MAKEFLAGS/" /etc/makepkg.conf
 
-manualinstall yay || error "Failed to install AUR helper."
+manualinstall || error "Failed to install AUR helper."
 
 # The command that does all the installing. Reads the progs.csv file and
 # installs each needed program the way required. Be sure to run this only after
